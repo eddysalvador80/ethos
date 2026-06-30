@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETHOS · Suite clínica</title>
+<meta name="description" content="Portal de la suite ETHOS: apoyo a la decisión clínica en anestesiología. Herramientas deterministas, offline y con bibliografía verificada.">
+<meta name="theme-color" content="#f4f7fb">
+<style>
+  :root{
+    --bg:#eef2f8; --bg2:#ffffff; --card:#ffffff; --card-h:#f6f9fd;
+    --ink:#16233f; --ink-soft:#5b6b88; --line:#e3e9f3;
+    --accent:#2f6bff; --accent2:#10a99d;
+    --ob:#e0567f; --hemo:#e23b4c; --tx:#3a5bd9; --txp:#6a4fe0; --ab:#0fa093; --pn:#c98a10;
+    --shadow:0 8px 24px rgba(20,40,90,.08);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1100px 560px at 50% -8%, #ffffff 0%, var(--bg) 70%);
+    color:var(--ink); min-height:100vh; line-height:1.5;
+  }
+  .wrap{max-width:1040px; margin:0 auto; padding:48px 20px 64px}
+  header{text-align:center; margin-bottom:40px}
+  .brand{font-size:clamp(34px,7vw,56px); font-weight:800; letter-spacing:.08em; margin:0}
+  .brand .dot{color:var(--accent2)}
+  .tagline{color:var(--ink-soft); font-size:clamp(15px,2.4vw,18px); margin:10px auto 0; max-width:640px}
+  .pill{display:inline-block; margin-top:18px; font-size:12.5px; color:var(--ink-soft);
+    border:1px solid var(--line); border-radius:999px; padding:6px 14px; background:#fff}
+  h2.group{font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft);
+    margin:34px 4px 14px; font-weight:700}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:16px}
+  .card{
+    display:flex; flex-direction:column; gap:8px; text-decoration:none; color:inherit;
+    background:linear-gradient(180deg,var(--card),var(--bg2)); border:1px solid var(--line);
+    border-radius:16px; padding:20px 20px 18px; box-shadow:var(--shadow);
+    transition:transform .14s ease, border-color .14s ease, background .14s ease;
+    position:relative; overflow:hidden;
+  }
+  .card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--c,var(--accent))}
+  .card:hover{transform:translateY(-3px); border-color:var(--c,var(--accent)); background:linear-gradient(180deg,var(--card-h),var(--bg2))}
+  .card .name{font-size:19px; font-weight:750; display:flex; align-items:center; gap:10px}
+  .card .ver{margin-left:auto; font-size:11.5px; font-weight:600; color:var(--ink-soft);
+    border:1px solid var(--line); border-radius:6px; padding:2px 7px}
+  .card .desc{color:var(--ink-soft); font-size:14px; min-height:40px}
+  .card .open{margin-top:6px; font-size:13.5px; font-weight:650; color:var(--c,var(--accent))}
+  .card .open::after{content:" →"}
+  footer{margin-top:48px; text-align:center; color:var(--ink-soft); font-size:12.5px; line-height:1.7}
+  footer .warn{color:#b45309; font-weight:600}
+  a.src{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 class="brand">ETHOS<span class="dot">·</span></h1>
+    <p class="tagline">Suite de apoyo a la decisión clínica en anestesiología. Cada herramienta es determinista, funciona <strong>offline</strong> y cita su bibliografía verificada.</p>
+    <span class="pill">Dr. Eddy Salvador · Lumina Health · 6 herramientas independientes</span>
+  </header>
+
+  <h2 class="group">Materna y obstétrica</h2>
+  <div class="grid">
+    <a class="card" style="--c:var(--ob)" href="https://eddysalvador80.github.io/ethos-ob/" target="_blank" rel="noopener">
+      <div class="name">ETHOS·OB</div>
+      <div class="desc">Decisión anestésica en cirugía <strong>no obstétrica</strong> durante el embarazo.</div>
+      <div class="open">Abrir herramienta</div>
+    </a>
+    <a class="card" style="--c:var(--hemo)" href="https://eddysalvador80.github.io/ethos-hemo/" target="_blank" rel="noopener">
+      <div class="name">ETHOS·HEMO</div>
+      <div class="desc">Sangre y coagulación en la embarazada: hemorragia, anemia, neuraxial, eclampsia.</div>
+      <div class="open">Abrir herramienta</div>
+    </a>
+  </div>
+
+  <h2 class="group">Transfusión y hemostasia</h2>
+  <div class="grid">
+    <a class="card" style="--c:var(--tx)" href="https://eddysalvador80.github.io/ethos-tx/" target="_blank" rel="noopener">
+      <div class="name">ETHOS·TX</div>
+      <div class="desc">Decisión transfusional y manejo de sangrado en el adulto.</div>
+      <div class="open">Abrir herramienta</div>
+    </a>
+    <a class="card" style="--c:var(--txp)" href="https://eddysalvador80.github.io/ethos-tx-pedi/" target="_blank" rel="noopener">
+      <div class="name">ETHOS·TX PEDI</div>
+      <div class="desc">Decisión transfusional en el paciente pediátrico.</div>
+      <div class="open">Abrir herramienta</div>
+    </a>
+  </div>
+
+  <h2 class="group">Equilibrio ácido-base</h2>
+  <div class="grid">
+    <a class="card" style="--c:var(--ab)" href="https://eddysalvador80.github.io/ethos-acido-base/" target="_blank" rel="noopener">
+      <div class="name">ETHOS Ácido-Base</div>
+      <div class="desc">Interpretación de gases y equilibrio ácido-base en el adulto, con contexto clínico.</div>
+      <div class="open">Abrir herramienta</div>
+    </a>
+    <a class="card" style="--c:var(--pn)" href="https://eddysalvador80.github.io/ethos-pedi-neo/" target="_blank" rel="noopener">
+      <div class="name">ETHOS Pedi-Neo</div>
+      <div class="desc">Ácido-base neonatal y pediátrico, abstención-primero. Herramienta docente.</div>
+      <div class="open">Abrir herramienta</div>
+    </a>
+  </div>
+
+  <footer>
+    Herramientas de apoyo. <span class="warn">No reemplazan el juicio clínico ni al equipo tratante.</span><br>
+    Cada app corre 100&nbsp;% en el navegador: no hay servidor ni se transmiten datos de pacientes.<br>
+    Portal ETHOS v1.0 · 2026
+  </footer>
+</div>
+</body>
+</html>
